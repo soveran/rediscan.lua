@@ -42,9 +42,9 @@ Installation
 You need to have [lsocket](http://www.tset.de/lsocket/) installed,
 then just copy rediscan.lua anywhere in your package.path.
 
-A `packages` file is provided in case you want to use [pac][pac].
-Follow the instructions in [pac's documentation][pac] to get
-started.
+A `packages` file is provided in case you want to use [pac][pac]
+to install the development dependencies. Follow the instructions
+in [pac's documentation][pac] to get started.
 
 [pac]: https://github.com/soveran/pac
 [resp]: https://github.com/soveran/resp

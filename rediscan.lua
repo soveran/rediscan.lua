@@ -1,5 +1,3 @@
-local resp = require("resp-31bf5e0")
-
 return function(c, fn, filters)
 	local args = {}
 	local keys = nil

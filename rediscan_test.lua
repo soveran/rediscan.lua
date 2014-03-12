@@ -1,6 +1,6 @@
 require("pl.strict")
 
-local rescan = require("rescan")
+local rediscan = require("rediscan")
 
 local resp = require("resp-31bf5e0")
 
@@ -23,7 +23,7 @@ end
 c:call("SET", "42", "true")
 c:call("SET", "23", "true")
 
-rescan(c, sum, {})
+rediscan(c, sum, {})
 
 assert(res == 65)
 
@@ -45,7 +45,7 @@ c:call("SET", "Foo:42", "true")
 c:call("SET", "Foo:23", "true")
 c:call("SET", "Bar:11", "true")
 
-rescan(c, cat, { match = "Foo:*" })
+rediscan(c, cat, { match = "Foo:*" })
 
 assert(res[1] == expected[1])
 assert(res[2] == expected[2])
