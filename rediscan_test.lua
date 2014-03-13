@@ -47,5 +47,6 @@ c:call("SET", "Bar:11", "true")
 
 rediscan(c, cat, { match = "Foo:*" })
 
+assert(#res == 2)
 assert(res[1] == expected[1])
 assert(res[2] == expected[2])
