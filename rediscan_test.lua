@@ -2,7 +2,7 @@ require("pl.strict")
 
 local rediscan = require("rediscan")
 
-local resp = require("resp-31bf5e0")
+local resp = require("resp-6e21869")
 
 local c = resp.new("localhost", 6379)
 
