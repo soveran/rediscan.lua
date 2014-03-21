@@ -31,22 +31,15 @@ prepare(c)
 
 -- Usage with MATCH
 
-local expected = {
-	"Foo:42",
-	"Foo:23",
-}
-
 local res = {}
 local cat = function(key)
 	table.insert(res, key)
 end
 
 c:call("SET", "Foo:42", "true")
-c:call("SET", "Foo:23", "true")
 c:call("SET", "Bar:11", "true")
 
 rediscan(c, cat, { match = "Foo:*" })
 
-assert(#res == 2)
-assert(res[1] == expected[1])
-assert(res[2] == expected[2])
+assert(#res == 1)
+assert(res[1] == "Foo:42")
